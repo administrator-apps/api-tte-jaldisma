@@ -5,8 +5,10 @@ module.exports = async (req, res) => {
     if (req.method === 'POST') {
         try {
             const { pdf_base64, p12_base64, passphrase } = req.body;
+            
+            // Jika server tidak menerima pdf atau p12_base64, munculkan error baru
             if (!pdf_base64 || !p12_base64) {
-                return res.status(400).json({ error: "Data PDF dan File Sertifikat wajib dikirim." });
+                return res.status(400).json({ error: "Data PDF dan File Sertifikat (.p12) wajib dikirim." });
             }
 
             // 1. Siapkan PDF
