@@ -1,12 +1,7 @@
 {
   "name": "api-tte-jaldisma",
   "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
   "dependencies": {
-    "express": "^4.18.2",
     "node-signpdf": "^1.5.0",
     "node-forge": "^1.3.1"
   }
